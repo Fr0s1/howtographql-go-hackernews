@@ -43,7 +43,7 @@ func (r *mutationResolver) CreateLink(ctx context.Context, input model.NewLink) 
 func (r *mutationResolver) CreateUser(ctx context.Context, input model.NewUser) (string, error) {
 	var user users.User
 
-	user.Username = input.Password
+	user.Username = input.Username
 	user.Password = input.Password
 
 	user.Create()
